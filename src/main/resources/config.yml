@@ -1,0 +1,34 @@
+database:
+  type: 'sqlite' # Valid options: 'sqlite' and 'mysql'
+  mysql:
+    address: 'localhost:3306'
+    username: 'root'
+    password: ''
+    database: 'test'
+  sqlite:
+    file: 'database/database.db'
+
+# Get the "type" of particle in:
+# https://jd.papermc.io/paper/1.20/org/bukkit/Particle.html
+#
+# Get the "material" of particle in:
+# https://jd.papermc.io/paper/1.20/org/bukkit/Material.html
+#
+# Configuration help:
+# "offset" is the displacement of the particles, based on x, y and z coordinates.
+# x = horizontal displacement
+# y = vertical displacement
+# z = front/back displacement
+particles:
+  test:
+    material: "STONE"
+    display-name: "&6Test particle"
+    description:
+      - "&7Very cool particle"
+    slot: 1
+    permission: "particle.test.permission"
+    price: 1000
+    particle-builder:
+      type: "FLAME"
+      count: 10 # amount of particles
+      offset: "0.2,0.0,0.2"
